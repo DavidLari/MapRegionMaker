@@ -29,34 +29,28 @@ open class MapRegionMaker {
     /// Region size will be padded by this factor. Default is 1.1 which pads 10%. Value of 1.2 would be 20%, etc.
     public var paddingFactor = 1.1
     
-    
-
-    
-    
     /**
-     It calculates and returns the map region needed to encompass all locations that have been added to the instance.
+     Calculates and returns the map region needed to encompass all locations that have been added to the instance.
      
      ## Important Notes ##
-     1. At least one valid location must have been added prior to calling.
+     1. At least one valid location must hbe added prior to calling.
      2. minimumRegionSize property is the smallest region that will be returned and defaults to 0.01
-     3. paddingFactor increases region size by a percentage. Default is 1.1 which adds 10%.
+     3. paddingFactor increases region size by a percentage. Default is 1.1 which adds 10%.     
+     - returns: padded map region that encompasses all locations added to the instance.
      
-     - Returns: padded map region that encompasses all locations added to the instance.
-     
-     */
+    */
     public func getMapRegion() -> MKCoordinateRegion {
         if minLatitude != nil {
-            
+
             let latitude = (minLatitude! + maxLatitude!) / 2
             let longitude = (minLongitude! + maxLongitude!) / 2
             
             let centerLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             let latDelta = max( paddingFactor * abs(maxLatitude! - minLatitude!), minimumRegionSize)
             let lonDelta = max( paddingFactor * abs(maxLongitude! - minLongitude!), minimumRegionSize)
-            
+
             let region = MKCoordinateRegion(center: centerLocation, span: MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta))
-            
-            // set map center to current location
+
             return region
         }
         else {
@@ -78,29 +72,29 @@ open class MapRegionMaker {
     }
     
     /** 
-     Adds a single CLLocationCoordinate2D extracted from a CLLocation to the region maker instance.
-    
-     - Parameter location: a single CLLocation
+     Adds a single CLLocationCoordinate2D extracted from a 
+     CLLocation to the region maker instance.
+     - parameter location: a single CLLocation
      
-     */
+    */
     public func add(location: CLLocation) {
         updateMinMax(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
     }
     
     /** 
-     Adds a single CLLocationCoordinate2D to the region maker instance.
-    
-     - Parameter location: a single CLLocationCoordinate2D
+     Adds a single CLLocationCoordinate2D 
+     to the region maker instance.
+     - parameter location: a single CLLocationCoordinate2D
      
-     */
+    */
     public func add(location: CLLocationCoordinate2D) {
         updateMinMax(latitude: location.latitude, longitude: location.longitude)
     }
     
     /**
-     Adds all CLLocationCoordinate2D's extracted from a CLLocation array to the region maker instance.
-     
-     - Parameter locations: an array of type CLLocation
+     Adds all CLLocationCoordinate2D's extracted from a 
+     CLLocation array to the region maker instance.
+     - parameter locations: an array of type CLLocation
      
     */
     public func add(locations: [CLLocation]) {
@@ -110,9 +104,9 @@ open class MapRegionMaker {
     }
     
     /**
-     Adds all CLLocationCoordinate2D's from a CLLocationCoordinate2D array to the region maker instance.
-
-     - Parameter locations: an array of type CLLocationCoordinate2D
+     Adds all CLLocationCoordinate2D's from a CLLocationCoordinate2D 
+     array to the region maker instance.
+     - parameter locations: an array of type CLLocationCoordinate2D
 
     */
     public func add(locations: [CLLocationCoordinate2D]) {
