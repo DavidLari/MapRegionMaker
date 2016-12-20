@@ -71,44 +71,33 @@ open class MapRegionMaker {
         
     }
     
-    /** 
-     Adds a single CLLocationCoordinate2D extracted from a 
-     CLLocation to the region maker instance.
-     - parameter location: a single CLLocation
-     
-    */
+    
+    /// Adds a single CLLocationCoordinate2D extracted from a
+    /// CLLocation to the region maker instance.
+    /// - parameter location: a single CLLocation
     public func add(location: CLLocation) {
         updateMinMax(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
     }
     
-    /** 
-     Adds a single CLLocationCoordinate2D 
-     to the region maker instance.
-     - parameter location: a single CLLocationCoordinate2D
-     
-    */
+    /// Adds a single CLLocationCoordinate2D
+    /// to the region maker instance.
+    /// - parameter location: a single CLLocationCoordinate2D
     public func add(location: CLLocationCoordinate2D) {
         updateMinMax(latitude: location.latitude, longitude: location.longitude)
     }
     
-    /**
-     Adds all CLLocationCoordinate2D's extracted from a 
-     CLLocation array to the region maker instance.
-     - parameter locations: an array of type CLLocation
-     
-    */
+    /// Adds all CLLocationCoordinate2D's extracted from a
+    /// CLLocation array to the region maker instance.
+    /// - parameter locations: an array of type CLLocation
     public func add(locations: [CLLocation]) {
         for location in locations {
             add(location: location)
         }
     }
     
-    /**
-     Adds all CLLocationCoordinate2D's from a CLLocationCoordinate2D 
-     array to the region maker instance.
-     - parameter locations: an array of type CLLocationCoordinate2D
-
-    */
+    /// Adds all CLLocationCoordinate2D's from a CLLocationCoordinate2D
+    /// array to the region maker instance.
+    /// - parameter locations: an array of type CLLocationCoordinate2D
     public func add(locations: [CLLocationCoordinate2D]) {
         for location in locations {
             add(location: location)
