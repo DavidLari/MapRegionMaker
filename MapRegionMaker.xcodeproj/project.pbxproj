@@ -10,6 +10,7 @@
 		F5C722BC1E0858A700ACBB5F /* MapRegionMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C722B21E0858A700ACBB5F /* MapRegionMaker.framework */; };
 		F5C722C11E0858A700ACBB5F /* MapRegionMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C722C01E0858A700ACBB5F /* MapRegionMakerTests.swift */; };
 		F5C722C31E0858A700ACBB5F /* MapRegionMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C722B51E0858A700ACBB5F /* MapRegionMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5C722CD1E085A7A00ACBB5F /* MapRegionMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C722CC1E085A7A00ACBB5F /* MapRegionMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		F5C722BB1E0858A700ACBB5F /* MapRegionMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapRegionMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C722C01E0858A700ACBB5F /* MapRegionMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRegionMakerTests.swift; sourceTree = "<group>"; };
 		F5C722C21E0858A700ACBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5C722CC1E085A7A00ACBB5F /* MapRegionMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRegionMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		F5C722B41E0858A700ACBB5F /* MapRegionMaker */ = {
 			isa = PBXGroup;
 			children = (
+				F5C722CC1E085A7A00ACBB5F /* MapRegionMaker.swift */,
 				F5C722B51E0858A700ACBB5F /* MapRegionMaker.h */,
 				F5C722B61E0858A700ACBB5F /* Info.plist */,
 			);
@@ -149,6 +152,7 @@
 					F5C722B11E0858A700ACBB5F = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 4B23BTB7YD;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					F5C722BA1E0858A700ACBB5F = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C722CD1E085A7A00ACBB5F /* MapRegionMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 		F5C722C71E0858A700ACBB5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4B23BTB7YD;
@@ -330,10 +336,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MapRegionMaker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidlaristudios.MapRegionMaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +349,7 @@
 		F5C722C81E0858A700ACBB5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4B23BTB7YD;
@@ -349,6 +358,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MapRegionMaker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidlaristudios.MapRegionMaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +370,7 @@
 		F5C722CA1E0858A700ACBB5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4B23BTB7YD;
 				INFOPLIST_FILE = MapRegionMakerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +383,7 @@
 		F5C722CB1E0858A700ACBB5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4B23BTB7YD;
 				INFOPLIST_FILE = MapRegionMakerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -400,6 +412,7 @@
 				F5C722C81E0858A700ACBB5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5C722C91E0858A700ACBB5F /* Build configuration list for PBXNativeTarget "MapRegionMakerTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +421,7 @@
 				F5C722CB1E0858A700ACBB5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
