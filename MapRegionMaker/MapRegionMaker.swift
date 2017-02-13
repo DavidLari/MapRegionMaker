@@ -3,7 +3,7 @@
 //  MeckParks
 //
 //  Created by David Lari on 12/18/16.
-//  Copyright © 2016 David Lari. All rights reserved.
+//  Copyright © 2016-2017 David Lari. All rights reserved.
 //
 
 import Foundation

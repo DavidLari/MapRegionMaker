@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F54BB2E71E52375E007DC24A /* MapRegionMaker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F54BB2E61E52375E007DC24A /* MapRegionMaker.podspec */; };
 		F5C722BC1E0858A700ACBB5F /* MapRegionMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C722B21E0858A700ACBB5F /* MapRegionMaker.framework */; };
 		F5C722C11E0858A700ACBB5F /* MapRegionMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C722C01E0858A700ACBB5F /* MapRegionMakerTests.swift */; };
 		F5C722C31E0858A700ACBB5F /* MapRegionMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C722B51E0858A700ACBB5F /* MapRegionMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F54BB2E61E52375E007DC24A /* MapRegionMaker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MapRegionMaker.podspec; sourceTree = "<group>"; };
 		F5C722B21E0858A700ACBB5F /* MapRegionMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapRegionMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C722B51E0858A700ACBB5F /* MapRegionMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapRegionMaker.h; sourceTree = "<group>"; };
 		F5C722B61E0858A700ACBB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,9 +54,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F54BB2E51E523735007DC24A /* PodMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				F54BB2E61E52375E007DC24A /* MapRegionMaker.podspec */,
+			);
+			name = PodMetadata;
+			sourceTree = "<group>";
+		};
 		F5C722A81E0858A700ACBB5F = {
 			isa = PBXGroup;
 			children = (
+				F54BB2E51E523735007DC24A /* PodMetadata */,
 				F5C722B41E0858A700ACBB5F /* MapRegionMaker */,
 				F5C722BF1E0858A700ACBB5F /* MapRegionMakerTests */,
 				F5C722B31E0858A700ACBB5F /* Products */,
@@ -185,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54BB2E71E52375E007DC24A /* MapRegionMaker.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
