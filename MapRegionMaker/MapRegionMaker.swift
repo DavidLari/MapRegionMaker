@@ -33,7 +33,7 @@ open class MapRegionMaker {
      Calculates and returns the map region needed to encompass all locations that have been added to the instance.
      
      ## Important Notes ##
-     1. At least one valid location must hbe added prior to calling.
+     1. At least one valid location must be added prior to calling.
      2. minimumRegionSize property is the smallest region that will be returned and defaults to 0.01
      3. paddingFactor increases region size by a percentage. Default is 1.1 which adds 10%.     
      - returns: padded map region that encompasses all locations added to the instance.
@@ -71,6 +71,13 @@ open class MapRegionMaker {
         
     }
     
+    
+    /// Adds a single CLLocationCoordinate2D extracted from
+    /// latitude and longitude pair (expressed as Doubles) to the region maker instance.
+    /// - parameter location: a single CLLocation
+    public func add(latitude: Double, longitude: Double) {
+        updateMinMax(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
+    }
     
     /// Adds a single CLLocationCoordinate2D extracted from a
     /// CLLocation to the region maker instance.
