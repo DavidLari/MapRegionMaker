@@ -35,7 +35,7 @@ Add coordinates, either as singles or arrays.
 
 ## Roadmap
 
-* CocoaPod support coming soon.
+* ~~CocoaPod support coming soon.~~ Done!
 * Better usage example coming soon.
 
 ## About
