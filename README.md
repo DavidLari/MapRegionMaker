@@ -7,6 +7,16 @@ The easy way to create a map region around sets of coordinates in Swift.
 
 When you have a map view in an iOS application, you may wish to add annotations or poly lines, etc. After adding them, you'd like to have the map zoom to a region that contains all the coordinates and maybe a little bit of padding on the sides. This simple framework makes it easy.
 
+## Installation
+
+### CocoaPods
+Add to your pod file:
+
+```pod 'MapRegionMaker'```
+
+### Manually
+Simply drop the file into your project.
+
 ## Usage
 
 Import:
