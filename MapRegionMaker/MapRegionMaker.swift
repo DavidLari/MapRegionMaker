@@ -111,7 +111,6 @@ open class MapRegionMaker {
         }
     }
     
-    
     private func initializeMinMax(latitude: CLLocationDegrees, longitude: CLLocationDegrees ) {
         // if minLat is nil, we assume all are nil and initialize them to the passed values.
         if minLatitude == nil {
@@ -123,9 +122,12 @@ open class MapRegionMaker {
         
     }
     
-    
-    
-    
-    
+    /// Clears all coordinates from the instance.
+    public func clear() {
+        minLatitude = nil
+        maxLatitude = nil
+        minLongitude = nil
+        maxLongitude = nil
+    }
     
 }
